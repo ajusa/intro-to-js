@@ -16,10 +16,12 @@ combine = a + myString //5Hello world!
 //JS has a super weak type system, which means that it will often "autoconvert" types for you. Certain types take precedence.
 //In this example, strings are above numbers. You can still cast types manually
 
+/*
 // HELLO WORLD //
 console.log(myString) //prints out "Hello world!". console.log takes in pretty much any arguements and prints it out.
+*/
 
-
+/*
 // CONTROL FLOW //
 if(a == 5){ //simple if statement
 	//do something
@@ -45,8 +47,9 @@ while(i < arr2.length){ //you can always use a while loop to do the same thing
 	console.log(arr2[i])
 	i++
 }
+*/
 
-
+/*
 // FUNCTIONS INTRO //
 //why is this intro? JS functions are whack. They do everything and it sometimes will trigger people
 //let's create a simple add function
@@ -63,8 +66,9 @@ times = function(func, x){ //we want this function to execute "func" x number of
 //JS has functions be actual types, so assigning it does the same thing as above with "add"
 
 times(function(){console.log("this is confusing")}, 3) //should print out that string 3 times.
+*/
 
-
+/*
 // JAVASCRIPT OBJECTS //
 //most of you have probably seen or used a .json file.
 //JSON stands for Java Script Object Notation. These are quite similar to Python dictionaries.
@@ -85,7 +89,9 @@ console.log(obj["is lit"]) //prints out false
 obj["newKey"] = 5 //creates a new key and assigns a value
 obj.newKey = 6
 console.log(obj.newKey) //what will this print out?
+*/
 
+/*
 // OBJECT ORIENTATION //
 //oh boy, classes. One of the most confusing things about JS.
 //let's make a todo class
@@ -115,8 +121,9 @@ todo2.addDesc("why is this a thing, JS?")
 todo2.print()
 //on one hand, this is confusing. On the other hand, it saves some typing, and might make it easier to do things
 //there are also ways to make private and public variables in classes, but I am not going to cover that in this Intro
+*/
 
-
+/*
 // ARRAYS //
 arr2.push(5) //use push to add on to the end of an array
 console.log(arr2)
@@ -126,8 +133,9 @@ console.log(arr2)
 //arrays can hold multiple types, such as objects
 arr2.push({obj: true})
 console.log(arr2)
+*/
 
-
+/*
 // SIMPLE PROJECT TIME! //
 //your task: create a todo list application that allows the user to add items, and can display them
 function simpleTodo(name){
@@ -143,7 +151,7 @@ function todoApp(){
 	}
 }
 todoApp()
-
+*/
 // MORE TIME //
 //hey, let's extend the above to allow deleting an element
 //combining it with HTML and CSS
