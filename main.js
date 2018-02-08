@@ -44,13 +44,13 @@ while(i < arr2.length){ //you can always use a while loop to do the same thing
 	i++
 }
 
+
 // FUNCTIONS INTRO //
 //why is this intro? JS functions are whack. They do everything and it sometimes will trigger people
 //let's create a simple add function
 function add(a, b){
 	return //your code here
 }
-
 console.log(add(5,4)) //should print out 9
 
 //Javascript also supports passing in functions as arguments. It is confusing, but can be useful
@@ -62,7 +62,8 @@ times = function(func, x){ //we want this function to execute "func" x number of
 
 times(function(){console.log("this is confusing")}, 3) //should print out that string 3 times.
 
-// JavaScript Objects //
+
+// JAVASCRIPT OBJECTS //
 //most of you have probably seen or used a .json file.
 //JSON stands for Java Script Object Notation. These are quite similar to Python dictionaries.
 obj = {
@@ -123,3 +124,32 @@ console.log(arr2)
 //arrays can hold multiple types, such as objects
 arr2.push({obj: true})
 console.log(arr2)
+
+// SIMPLE PROJECT TIME! //
+//your task: create a todo list application that allows the user to add items, and can display them
+function todo(name){
+	//this references whatever object is created with todo. Little confusing
+	this.name = name //we take the name passed in to the function, and assign it to the new object's name property
+	this.isDone = false
+	this.checkOff = function(){ //just as before, you can assign a function to a variable.
+		//implement this 
+	}
+	this.print = function(){ //checkOff and print are examples of methods
+		console.log(this)
+	}
+}
+todos = []
+function todoApp(){
+	list = "" //this should contain each todo, as a string. For example, 1. todo name \n 2. todo name
+	input = prompt("What would you like to add?" + list) //prompt asks a user for a string input
+	if(input){
+		//your code here
+		todoApp()
+	}
+}
+todoApp()
+
+// MORE TIME //
+//hey, let's extend the above to allow deleting an element
+//combining it with HTML and CSS
+//any other ideas or thoughts people have
