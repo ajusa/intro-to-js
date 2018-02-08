@@ -12,7 +12,9 @@ myString = "Hello world!" //declare strings like so.
 arr = [] //declares an empty array
 arr2 = [1, 2, 3, 4] //creates an array with a few numbers as elements.
 fun = true //simple booleans
-
+combine = a + myString //5Hello world!
+//JS has a super weak type system, which means that it will often "autoconvert" types for you. Certain types take precedence.
+//In this example, strings are above numbers. You can still cast types manually
 
 // HELLO WORLD //
 console.log(myString) //prints out "Hello world!". console.log takes in pretty much any arguements and prints it out.
@@ -102,7 +104,6 @@ todo1 = new todo("something") //the new keyword is what makes this "function" in
 todo1.print()
 //todo1 is an object now, just like the objects we created before.
 //but wait, JS gets weirder
-
 //what if we wanted to extend this class and add a description field?
 todo.prototype.addDesc = function(desc){
 	this.desc = desc
@@ -115,6 +116,7 @@ todo2.print()
 //on one hand, this is confusing. On the other hand, it saves some typing, and might make it easier to do things
 //there are also ways to make private and public variables in classes, but I am not going to cover that in this Intro
 
+
 // ARRAYS //
 arr2.push(5) //use push to add on to the end of an array
 console.log(arr2)
@@ -125,23 +127,16 @@ console.log(arr2)
 arr2.push({obj: true})
 console.log(arr2)
 
+
 // SIMPLE PROJECT TIME! //
 //your task: create a todo list application that allows the user to add items, and can display them
-function todo(name){
-	//this references whatever object is created with todo. Little confusing
+function simpleTodo(name){
 	this.name = name //we take the name passed in to the function, and assign it to the new object's name property
-	this.isDone = false
-	this.checkOff = function(){ //just as before, you can assign a function to a variable.
-		//implement this 
-	}
-	this.print = function(){ //checkOff and print are examples of methods
-		console.log(this)
-	}
 }
 todos = []
 function todoApp(){
 	list = "" //this should contain each todo, as a string. For example, 1. todo name \n 2. todo name
-	input = prompt("What would you like to add?" + list) //prompt asks a user for a string input
+	input = prompt("What would you like to add?\n" + list) //prompt asks a user for a string input
 	if(input){
 		//your code here
 		todoApp()
