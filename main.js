@@ -83,16 +83,43 @@ obj["newKey"] = 5 //creates a new key and assigns a value
 obj.newKey = 6
 console.log(obj.newKey) //what will this print out?
 
-// Object Orientation //
+// OBJECT ORIENTATION //
 //oh boy, classes. One of the most confusing things about JS.
 //let's make a todo class
 function todo(name){
-	this.name = name
+	//this references whatever object is created with todo. Little confusing
+	this.name = name //we take the name passed in to the function, and assign it to the new object's name property
 	this.isDone = false
-	this.checkOff = function(){
-		this.isDone = true
+	this.checkOff = function(){ //just as before, you can assign a function to a variable.
+		//implement this 
 	}
-	this.print = function(){
+	this.print = function(){ //checkOff and print are examples of methods
 		console.log(this)
 	}
 }
+todo1 = new todo("something") //the new keyword is what makes this "function" into an object
+todo1.print()
+//todo1 is an object now, just like the objects we created before.
+//but wait, JS gets weirder
+
+//what if we wanted to extend this class and add a description field?
+todo.prototype.addDesc = function(desc){
+	this.desc = desc
+}
+//the prototype object is something that is part of every class, and it allows you to modify the underlying object
+//so, we can use it to add new fields and functions
+todo2 = new todo("wait what")
+todo2.addDesc("why is this a thing, JS?")
+todo2.print()
+//on one hand, this is confusing. On the other hand, it saves some typing, and might make it easier to do things
+//there are also ways to make private and public variables in classes, but I am not going to cover that in this Intro
+
+// ARRAYS //
+arr2.push(5) //use push to add on to the end of an array
+console.log(arr2)
+arr2.pop() //removes from the end of an array
+arr2.splice(1,3) //removes index 1, 2, and 3
+console.log(arr2)
+//arrays can hold multiple types, such as objects
+arr2.push({obj: true})
+console.log(arr2)
