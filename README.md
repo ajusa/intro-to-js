@@ -14,3 +14,5 @@ I would use [repl](https://repl.it/languages/javascript) to run your code.
 - Control Flow (loops, if, switch case)
 - Classes
 - Objects
+
+Creating a project would have been a better idea
